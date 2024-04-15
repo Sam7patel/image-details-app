@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Background */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #180b0b, #c89a9a); /* Gradient background */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* App Container */
+.app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+/* Header */
+.app-header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
+.app-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Main Content */
+.app-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Description */
+.app-description {
+  max-width: 600px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align text to the left */
+  animation: slideInLeft 1s ease forwards; /* Animation */
+  opacity: 0; /* Hide initially */
+}
+
+/* Animation Keyframes */
+@keyframes slideInLeft {
   from {
-    transform: rotate(0deg);
+    transform: translateX(-100%);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    transform: translateX(0);
+    opacity: 1;
   }
 }
+
+.app-description h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.app-description p {
+  color: #666;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Image Upload Container */
+.upload-image-container {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.upload-image-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.upload-image-container h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.upload-image-container p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+
+
